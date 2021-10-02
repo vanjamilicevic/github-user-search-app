@@ -168,7 +168,7 @@
         ". numbers numbers"
         ". location twitter"
         ". website company";
-    grid-template-columns: 1fr 1.5fr 1.1fr;
+    grid-template-columns: 1fr 1.5fr 1.3fr;
 
     background-color: #1E2A47;
     padding: 2vw;
