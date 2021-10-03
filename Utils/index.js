@@ -180,7 +180,7 @@ form.addEventListener('submit', function(e){
 /*
    Toggling website theme
 */
-document.getElementById("light-dark").addEventListener("click", () => {
+document.getElementById("click-area").addEventListener("click", () => {
 
    let text = document.getElementById("light-dark").innerHTML
    if (text === "LIGHT") {

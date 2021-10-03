@@ -17,10 +17,15 @@
 .dark-light-container {
 
     display: grid;
-    grid-template-columns: 8fr 0.3fr 0.3fr;
+    grid-template-columns: 6fr 1fr;
 
     width: 50vw;
     margin: 10vh auto 0 auto;
+ }
+
+ .click-area {
+
+  display: flex;
  }
  
  /* Title */
