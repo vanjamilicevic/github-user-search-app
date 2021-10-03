@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="CSS/globals.css">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <title></title>
+</head>
+<body>
+
+  <section class="dark-light-container">
+    <p id="title">devfinder</p>
+      <div class="click-area" id="click-area">
+        <p id="light-dark">LIGHT</p>
+        <img id="sun-moon" src="./assets/icon-sun.svg" alt="Icon of Sun and Moon"/>
+      </div>
+  </section>
+
+  <main class="main-container">
+    
+    <form class="search-username-form" id="search-username-form" autocomplete="off">
+      <img src="./assets/icon-search.svg" alt="Search icon"/>
+      <input type="text" class="search" id="search" placeholder="Search GitHub username...">
+      <p class="no-results" id="no-results">No results</p>
+      <button id="button-search">Search</button>
+    </form>
+  
+    <section class="user-container" id="user-container">
+
+        <img class="user-image" id="git-profile-image" src="" alt="Profile image">
+        <h1 class="name" id="name"></h1>
+        <p class="username" id="username"></p>
+        <p class="date" id="joined-date"></p>
+        <p class="bio" id="bio"></p>
+
+        <div class="numbers" id="numbers">
+          <p class="numbers-title">Repos</p>
+          <p class="numbers-title">Followers</p>
+          <p class="numbers-title">Following</p>
+          <p class="numbers-value" id="repos"></p>
+          <p class="numbers-value" id="followers"></p>
+          <p class="numbers-value" id="following"></p>
+        </div>
+        
+
+        <div class="location info">
+          <img class="white-image" id="location-image" src="./assets/icon-location.svg" alt="Icon location">
+          <p id="location"></p>
+        </div>
+        <div class="twitter info">
+          <img class="white-image" id="twitter-image" src="./assets/icon-twitter.svg" alt="Twitter logo">
+          <p id="twitter"></p>
+        </div>
+        <div class="website info">
+          <img class="white-image" id="website-image" src="./assets/icon-website.svg" alt="Icon website">
+          <p id="website"></p>
+        </div>
+        
+        <div class="company info">
+          <img class="white-image" id="company-image" src="./assets/icon-company.svg" alt="Icon company">
+          <p id="company"></p>
+        </div>
+        
+    </section>
+    
+  </main>
+
+  <script src="./Utils/index.js"></script>
+</body>
+</html>

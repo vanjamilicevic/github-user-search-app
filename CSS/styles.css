@@ -1,0 +1,827 @@
+
+/* --------------------------------------------------------------------------- 
+    Desktop design
+
+
+
+*/
+
+/* 
+
+    Dark-Light container represents a line that consists of:
+    - Title
+    - Light/Dark text
+    - Icon of a sun or a moon
+    
+*/
+.dark-light-container {
+
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+
+    width: 50vw;
+    margin: 10vh auto 0 auto;
+ }
+
+ .click-area {
+
+  display: flex;
+ }
+ 
+ /* Title */
+#title {
+
+    font-size: 26px;
+    font-weight: bold;
+ }
+
+ /* Dark/Light */
+#light-dark {
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    padding: 4px;
+ }
+
+ /* Sun/Moon icon */
+#sun-moon {
+
+    margin-left: 1vw;
+ }
+
+/* 
+    User container consits out of:
+    - Search form (with search icon, input and button)
+    - ...
+*/
+ .main-container {
+
+    width: 47%;
+    margin: 4vh auto 0 auto;
+    color: white;
+
+    margin-bottom: 10vh;
+}
+
+/*
+    Search username form consists out of: 
+    - Search icon
+    - Input
+    - Search button
+*/
+.search-username-form {
+
+    display: grid;
+    grid-template-columns: 0.3fr 7fr 3fr 0.5fr;
+
+    background-color: #1E2A47;
+    border-radius: 20px;
+
+    padding: 10px;
+}
+
+/* Search icon */
+.search-username-form img {
+
+    padding: 10px;
+    padding-top: 15px;
+}
+
+/* Search text */
+.search {
+
+    background-color: #1E2A47;
+    border: none;
+    margin-left: 1vw;
+    
+    font-family: "Space Mono";
+    color: white;
+
+    width: 70%;
+}
+
+/* Placeholder */
+.search::placeholder {
+
+    font-size: 18px;
+    line-height: 25px;
+    
+    color: white;
+    opacity: 0.85;
+}
+
+/* No results paragraph which is by default hidden */
+.no-results {
+
+    color: #F74646;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 4vw;
+
+    font-size: 15px;
+    visibility: hidden;
+}
+
+/* Button */
+.search-username-form button {
+
+    background-color: #0079FF;
+    
+    color: white;
+    font-family: "Space Mono";
+    font-weight: bold;
+    
+    border: none;
+    padding: 15px 25px 15px 25px;
+    border-radius: 15px;
+
+    margin-left: auto;
+}
+
+.search-username-form button:hover {
+
+  background-color: #60ABFF;
+}
+
+/* 
+
+    User container consists out of: 
+    - User image
+    - Name 
+    - Github Username
+    - Date
+    - Bio
+    - Numbers: 
+        - Repos
+        - Followers
+        - Following
+    - Location
+    - Twitter
+    - Website
+    - Company
+
+*/
+
+
+.user-container {
+
+    display: grid;
+    grid-template-areas:
+        "image name date"
+        "image username ."
+        "image bio ."
+        ". numbers numbers"
+        ". location twitter"
+        ". website company";
+    grid-template-columns: 1fr 1.5fr 1.3fr;
+
+    background-color: #1E2A47;
+    padding: 2vw;
+    border-radius: 20px;
+    margin-top: 3vh;
+}
+
+.user-image {
+
+    grid-area: image;
+
+    width: 8vw;
+    height: 8vw;
+
+    border-radius: 100px;
+    margin-left: 1.5vw;
+    margin-top: 1vh;
+
+}
+
+.name {
+  
+    grid-area: name;
+    font-weight: bold;
+
+    margin-top: 1.5vh;
+    font-size: 26px;
+
+  }
+
+  .username {
+
+    grid-area: username;
+
+    font-size: 16px;
+    color: #0079FF;
+
+    margin-top: 4px;
+  }
+
+  .date {
+
+    grid-area: date;
+
+    font-size: 15px;
+    margin-top: 2.2vh;
+    margin-left: 3vw;
+  }
+
+  .bio {
+
+    grid-area: bio;
+
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .numbers {
+
+    grid-area: numbers;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr 1fr;
+
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    background-color: #141D2F;
+    padding: 1.2vw 4vw 1vw 2vw;
+    border-radius: 10px;
+
+    width: 80%;
+  }
+
+  .numbers-title {
+
+    font-size: 13px;
+    line-height: 20px;
+    opacity: 0.8;
+
+    margin-bottom: 1vh;
+  }
+
+  .numbers-value {
+
+    font-size: 23px;
+    font-weight: bold;
+  }
+
+  .info {
+
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    gap: 2vw;
+    margin-bottom: 0.5vw;
+  }
+
+  .info a {
+
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .info p {
+
+    display: block;
+    width: 90%;
+    word-break: break-all;
+  }
+
+  .white-image {
+
+    filter: brightness(0) invert(1);
+  }
+
+  .location {
+
+    grid-area: location;
+  }
+
+  .twitter {
+
+    grid-area: twitter;
+  }
+
+  .website {
+
+    grid-area: website;
+  }
+   
+  .company {
+
+    grid-area: company;
+  }
+
+  /* Utils classes */
+  .transparent-bio {
+
+    opacity: 0.7;
+  }
+
+  .transparent-info {
+
+    opacity: 0.5;
+  }
+
+  .transparent-image {
+
+    opacity: 0.5;
+  }
+
+/*
+  Light version
+
+
+*/
+
+.body-light {
+
+    background-color: #F2F2F2;
+    color: #222731;
+}
+
+.search-username-form-light {
+
+  background-color: #FEFEFE;
+}
+
+.search-username-form-light .search-light {
+
+  background-color: #FEFEFE;
+  border: none;
+  margin-left: 1vw;
+  
+  font-family: "Space Mono";
+  color: #222731;
+
+  width: 70%;
+}
+
+.search-username-form-light .search-light::placeholder {
+
+  color: #4B6A9B;
+}
+
+.user-container-light {
+
+  background-color: #FEFEFE;
+}
+
+.name-light {
+
+  color: #2B3442
+}
+
+.date-light {
+
+  color: #697C9A;
+}
+
+.bio-light {
+
+  color: #4B6A9B;
+}
+
+.numbers-light {
+
+  background-color: #F6F8FF;
+}
+
+.numbers-title-light {
+
+  color: #4B6A9B;
+}
+
+.numbers-value-light {
+
+  color: #2B3442;
+}
+
+.icons-light-version {
+
+  filter: none;
+}
+
+.info-light {
+
+  color: #4B6A9B;
+}
+
+/*
+  ---------------------------------------------------------------------------------------------
+    Media queries
+
+
+*/
+
+@media only screen and (max-width: 1450px){
+
+  .main-container {
+
+    width: 65%;
+  }
+
+  .dark-light-container {
+
+    width: 62%;
+  }
+
+  .no-results {
+
+    margin-top: 3vh;
+  }
+}
+
+/*  ----------------------------------Tablet version---------------------------------- */
+@media only screen and (max-width: 1050px) {
+  
+  .dark-light-container {
+
+    display: grid;
+    grid-template-columns: 8fr 0.3fr 0.3fr;
+
+    width: 75vw;
+    margin-top: 15vh;
+  }
+
+  .dark-light-container #title {
+
+    font-size: 20px;
+  }
+
+  .dark-light-container #light-dark {
+
+    font-size: 11px;
+  }
+
+  .dark-light-container #sun-moon {
+
+    height: 2vw;
+    width: 2vw;
+
+    margin-top: .2vh;
+  }
+
+  .main-container {
+
+    width: 75%;
+  }
+
+  .search-username-form {
+
+    padding: 3px;
+    padding-left: 15px;
+    padding-right: 10px;
+
+    border-radius: 7px;
+  }
+
+  .search-username-form img {
+
+    width: 2.8vw;
+    height: 2.8vw;
+
+    padding: 10px;
+    padding-top: 15px;
+  }
+
+  .search {
+
+    font-size: 14px;
+    width: 80%;
+  }
+  
+  .search::placeholder {
+
+    font-size: 14px;
+  }
+
+  .no-results {
+
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  .search-username-form button {
+
+    padding: 5px 20px 5px 20px;
+    border-radius: 15px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+
+    border-radius: 7px;
+  }
+ 
+  .user-container {
+
+    display: grid;
+    grid-template-areas:
+        "image name"
+        "image username"
+        "image date"
+        "bio bio"
+        "numbers numbers"
+        "location twitter"
+        "website company";
+
+    grid-template-columns: 1fr 1fr;
+  } 
+
+  .user-image {
+
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .name {
+
+    font-size: 20px;
+    margin-left: -18vw;
+    margin-top: 3vh;
+  }
+
+  .username {
+
+    margin-left: -18vw;
+    margin-top: 1vh;
+  }
+
+  .date {
+
+    margin-left: -18vw;
+    margin-top: 1.5vh;
+    font-size: 13px;
+  }
+
+  .bio {
+
+    margin-top: 4vh;
+  }
+
+  .numbers {
+
+    width: 92%;
+  }
+
+  .numbers-title {
+
+    margin-left: 1vw;
+    font-size: 12px;
+  }
+
+  .numbers-value {
+
+    margin-left: 1vw;
+    font-size: 17px;
+  }
+
+  .info {
+  
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    font-size: 12px;
+
+    margin-bottom: 2vh;
+  }
+
+  .info img {
+
+    margin-left: 4vw;
+  }
+
+}
+
+/*
+  ------------------------------------------------------------
+  Mobile
+
+*/
+@media only screen and (max-width: 768px) {
+
+  
+  .dark-light-container {
+
+    display: grid;
+    grid-template-columns: 8fr 0.3fr 0.3fr;
+
+    width: 90vw;
+    margin-top: 5vh;
+  }
+  .dark-light-container #sun-moon {
+
+    height: 4vw;
+    width: 4vw;
+  }
+
+  .main-container {
+
+    width: 90%;
+  }
+
+  .search-username-form {
+
+    padding: 1px;
+    padding-left: 5px;
+    padding-right: 10px;
+
+    border-radius: 7px;
+  }
+
+  .search-username-form img {
+
+    width: 2.8vw;
+    height: 2.8vw;
+
+    padding: 10px;
+    padding-top: 15px;
+  }
+
+  .search {
+
+    font-size: 12px;
+    width: 80%;
+  }
+  
+  .search::placeholder {
+
+    font-size: 10px;
+  }
+
+  .no-results {
+
+    font-size: 8px;
+    margin-top: 17px;
+  }
+
+  .search-username-form button {
+
+    padding: 1px 15px 1px 15px;
+    border-radius: 15px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+
+    border-radius: 7px;
+    font-size: 10px;
+    font-weight: normal;
+  }
+ 
+  .user-container {
+
+    display: grid;
+    grid-template-areas:
+        "image name"
+        "image username"
+        "image date"
+        "bio bio"
+        "numbers numbers"
+        "location location"
+        "website website"
+        "twitter twitter"
+        "company company";
+
+    grid-template-columns: 1fr 1fr;
+  } 
+
+  .user-image {
+
+    width: 20vw;
+    height: 20vw;
+
+    margin-top: 3vh;
+    margin-left: 3vw;
+  }
+
+  .name {
+
+    font-size: 15px;
+    margin-left: -16vw;
+    margin-top: 5vh;
+  }
+
+  .username {
+
+    margin-left: -16vw;
+    margin-top: 0;
+    font-size: 14px;
+  }
+
+  .date {
+
+    margin-left: -16vw;
+    margin-top: 0;
+    font-size: 11px;
+  }
+
+  .bio {
+
+    font-size: 12px;
+    margin-left: 3vw;
+  }
+
+  .numbers {
+
+    width: 92%;
+    padding: 5px;
+    margin: auto;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    text-align: center;
+
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .numbers-title {
+
+    margin-left: 0;
+    font-size: 12px;
+  }
+
+  .numbers-value {
+
+    margin-left: 0vw;
+    font-size: 17px;
+  }
+
+  .info {
+
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    margin-left: 3vw;
+  }
+
+  .info p {
+
+    margin-top: 0.5vh;
+  }
+
+  .info img {
+
+    margin-left: 1vw;
+  }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 320px) and (min-height: 565px) and (max-height: 660px) {
+
+  .search-username-form {
+
+    grid-template-columns: 1fr 4fr 3.5fr 1fr;
+  }
+
+  .no-results {
+
+    margin-top: 13px;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 376px) and (min-height: 640px) and (max-height: 668px) {
+
+  .search-username-form {
+
+    grid-template-columns: 1fr 4fr 2.5fr 1fr;
+  }
+
+  .no-results {
+
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 450px) and (min-height: 730px) and (max-height: 825px) {
+
+  .search-username-form {
+
+    grid-template-columns: 1fr 4fr 2.5fr 1fr;
+  }
+
+  .no-results {
+
+    margin-top: 15px;
+  }
+}
+
+/* Landscape */
+
+@media only screen and (min-height: 280px) and (max-height: 320px) and (min-width: 565px) and (max-width: 660px) {
+
+  .dark-light-container #sun-moon {
+
+    width: 3.5vw;
+    height: 3.5vw;
+  }
+}
+
+@media only screen and (min-height: 360px) and (max-height: 376px) and (min-width: 640px) and (max-width: 668px) {
+
+  .dark-light-container #sun-moon {
+
+    width: 3vw;
+    height: 3vw;
+  }
+}
+
+@media only screen and (min-height: 375px) and (max-height: 450px) and (min-width: 730px) and (max-width: 825px) {
+
+  .dark-light-container #sun-moon {
+
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+}
