@@ -79,7 +79,6 @@ function fetchAndSet(username) {
          document.getElementById("twitter").innerHTML = `<a target="_blank" 
          href="https://mobile.twitter.com/${data.twitter_username}">${data.twitter_username}
          </a>`
-         console.log(data);
          document.getElementById("twitter").classList.remove("transparent-info")
       }
       else {
