@@ -158,6 +158,7 @@
 
 */
 
+
 .user-container {
 
     display: grid;
@@ -206,7 +207,7 @@
     font-size: 16px;
     color: #0079FF;
 
-    margin-top: -2vh;
+    margin-top: 4px;
   }
 
   .date {
@@ -264,6 +265,12 @@
     grid-template-columns: 1fr 9fr;
     gap: 2vw;
     margin-bottom: 0.5vw;
+  }
+
+  .info a {
+
+    color: #ffffff;
+    text-decoration: none;
   }
 
   .info p {

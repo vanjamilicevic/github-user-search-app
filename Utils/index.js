@@ -21,6 +21,7 @@ function fetchAndSet(username) {
          and recursively calling same function to set data for Octocat
       */
       if (response.status === 404) {
+         document.getElementById("no-results").innerHTML = "No results"
          document.getElementById("no-results").style.visibility = "visible"
          fetchAndSet("octocat")
       } else {
@@ -51,9 +52,12 @@ function fetchAndSet(username) {
       /*
          Setting different message in case name data isn't present
       */
-      data.name ? 
-         document.getElementById("name").innerHTML = `${data.name}`: 
+      if(data.name) {
+         document.getElementById("name").innerHTML = `${data.name}`
+      }
+      else {
          document.getElementById("name").innerHTML = `${data.login}`
+      }
 
       /*
          Setting different message and styling in case bio data isn't present
@@ -72,7 +76,10 @@ function fetchAndSet(username) {
       */
       if(data.twitter_username) {
 
-         document.getElementById("twitter").innerHTML = `${data.twitter_username}`
+         document.getElementById("twitter").innerHTML = `<a target="_blank" 
+         href="https://mobile.twitter.com/${data.twitter_username}">${data.twitter_username}
+         </a>`
+         console.log(data);
          document.getElementById("twitter").classList.remove("transparent-info")
       }
       else {
@@ -103,7 +110,7 @@ function fetchAndSet(username) {
       */
       if(data.blog){
 
-         document.getElementById("website").innerHTML = `${data.blog}`
+         document.getElementById("website").innerHTML = `<a target="_blank" href="${data.blog}">${data.blog}</a>`
          document.getElementById("website").classList.remove("transparent-info")
       }
       else {
@@ -114,7 +121,8 @@ function fetchAndSet(username) {
       }
          
       if(data.company) {
-         document.getElementById("company").innerHTML = `${data.company}` 
+         company = data.company.slice(1)
+         document.getElementById("company").innerHTML = `<a target="_blznk" href="https://github.com/${company}">${data.company}</a>` 
          document.getElementById("company").classList.remove("transparent-info")
          
       } 
@@ -148,7 +156,26 @@ form.addEventListener('submit', function(e){
    e.preventDefault();
 
    let searchPhrase = document.getElementById("search").value;
-   fetchAndSet(searchPhrase)
+   if (searchPhrase === "") {
+
+      /*
+         Hiding visible error content if present
+      */
+      if (document.getElementById("no-results").style.visibility === "visible") 
+         document.getElementById("no-results").style.visibility = "hidden"
+
+      return
+   }
+   else if (searchPhrase.startsWith("@")) {
+
+      document.getElementById("no-results").innerHTML = "Remove \"@\""
+      document.getElementById("no-results").style.visibility = "visible"
+   }
+   else {
+
+      fetchAndSet(searchPhrase)
+   }
+   
 })
 
 /*
